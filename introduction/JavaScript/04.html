@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100">
+  <main class="p-14">
+    <div id="rantekun-background" class="relative m-auto" style="width: 896px; height: 360px; background-image: url(https://resource.runteq.jp/curriculum-img/bg-1.png); background-size: cover;">
+      <img src="https://resource.runteq.jp/curriculum-img/rantekun.svg" alt="らんてくん" width="158" height="246" id="rantekun" class="absolute" style="bottom: 28px; left: 374px;">
+    </div>
+    <div class="mt-10 px-6 flex justify-center">
+      <button id="change-background" class="px-9 py-3 bg-orange-500 hover:bg-orange-600 flex items-center justify-center rounded-lg">
+        <img src="https://resource.runteq.jp/curriculum-img/icon-reload.svg" alt="背景変更アイコン" width="34" height="34" class="mr-2">
+        <span class="text-xl font-bold text-white">背景変更</span>
+      </button>
+    </div>
+  </main>
+  <script>
+    // ここにJavaScriptのコードを記述します
+    const backgroundImage1 = 'url("https://resource.runteq.jp/curriculum-img/bg-1.png")';
+    const backgroundImage2 = 'url("https://resource.runteq.jp/curriculum-img/bg-2.png")';
+
+    // ボタン要素を取得する
+    const button = document.getElementById("change-background");
+
+
+    // 背景画像を設定するオブジェクトを取得する
+    const background = document.getElementById("rantekun-background");
+    // 背景画像の状態を定義する
+    let isBackgroundImage1 = true;
+
+    // ボタン要素にクリックイベントを設定する
+    button.addEventListener("click", function(){
+      console.log("ボタンがクリックされました");
+
+      // 背景画像の状態をコンソールに出力する
+      console.log(isBackgroundImage1);
+
+      //　背景画像の状態を判断して、背景画像の状態を変更する
+      if (isBackgroundImage1) {
+        console.log("背景画像1を2に変更します");
+        background.style.backgroundImage = backgroundImage2;
+        isBackgroundImage1 = false;
+      }else{
+        console.log("背景画像2を1に変更します");
+        background.style.backgroundImage = backgroundImage1;
+        isBackgroundImage1 = true;
+      }
+    });
+
+    // ボタン要素をコンソールに出力する
+    console.log(button);
+
+  </script>
+</body>
+
+</html>

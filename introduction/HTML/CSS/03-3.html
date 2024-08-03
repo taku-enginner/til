@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイドバー付きレイアウト</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .main {
+            flex: 1;
+        }
+        .sidebar {
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>サイトのタイトル</h1>
+    </header>
+    <!-- コンテナ -->
+    <div class="container">
+        <!-- メインコンテンツ -->
+        <main class="main">
+            <p>メインコンテンツ</p>
+        </main>
+        <!-- サイドバー -->
+        <aside class="sidebar">
+            <p>サイドバーの内容</p>
+        </aside>
+    </div>
+    <!-- フッター -->
+    <footer>
+        <p>フッターの内容</p>
+    </footer>
+</body>
+</html>

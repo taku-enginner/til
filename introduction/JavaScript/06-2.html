@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>テキスト読み上げサンプル</title>
+</head>
+<body>
+    <textarea id="text" rows="10" cols="50">ここに読み上げたいテキストを入力してください。</textarea>
+    <button id="speakButton">Speak</button>
+    <script>
+        const synth = window.speechSynthesis;
+        const text = document.getElementById('text');
+        const speakButton = document.getElementById('speakButton');
+        speakButton.addEventListener('click', function() {
+            // 発話オブジェクトを入力されたテキストで作成
+            const utterance = new SpeechSynthesisUtterance(text.value);
+            // 発話の再生
+            synth.speak(utterance);
+        });
+    </script>
+</body>
+</html>

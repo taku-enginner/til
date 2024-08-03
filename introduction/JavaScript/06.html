@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>オーディオ再生サンプル</title>
+</head>
+<body>
+    <button id="playButton">Play</button>
+    <button id="stopButton">Stop</button>
+    <script>
+        const audio = new Audio('https://runteq3-curriculum-production.s3.ap-northeast-1.amazonaws.com/audio/runteq.mp3');
+        document.getElementById('playButton').addEventListener('click', function() {
+            audio.play();
+        });
+        document.getElementById('stopButton').addEventListener('click', function() {
+            audio.pause();
+        });
+    </script>
+</body>
+</html>
